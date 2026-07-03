@@ -1,0 +1,22 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: fitociencia-care-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: fitociencia_care
+      MYSQL_USER: fitociencia
+      MYSQL_PASSWORD: fitociencia_dev_password
+      MYSQL_ROOT_PASSWORD: fitociencia_root_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - fitociencia-care-db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u fitociencia -pfitociencia_dev_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  fitociencia-care-db:

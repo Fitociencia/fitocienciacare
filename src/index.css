@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --deep-forest: #1B4332;
+    --sage: #52796F;
+    --mint-cream: #D8F3DC;
+    --earth-clay: #E07A5F;
+    --parchment: #F2E8CF;
+    --charcoal: #2D3436;
+    --white-90: rgba(255,255,255,0.90);
+    --white-50: rgba(255,255,255,0.50);
+    --gold: #C9A227;
+    --forest-80: rgba(27,67,50,0.80);
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 160 41% 17%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 160 18% 40%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 38 45% 88%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 14 66% 63%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 18% 40%;
+    --input: 160 18% 30%;
+    --ring: 160 41% 17%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-parchment text-charcoal antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .bg-deep-forest {
+    background-color: var(--deep-forest);
+  }
+  .bg-sage {
+    background-color: var(--sage);
+  }
+  .bg-mint-cream {
+    background-color: var(--mint-cream);
+  }
+  .bg-earth-clay {
+    background-color: var(--earth-clay);
+  }
+  .bg-parchment {
+    background-color: var(--parchment);
+  }
+  .bg-forest-80 {
+    background-color: var(--forest-80);
+  }
+  .text-deep-forest {
+    color: var(--deep-forest);
+  }
+  .text-sage {
+    color: var(--sage);
+  }
+  .text-mint-cream {
+    color: var(--mint-cream);
+  }
+  .text-earth-clay {
+    color: var(--earth-clay);
+  }
+  .text-parchment {
+    color: var(--parchment);
+  }
+  .text-charcoal {
+    color: var(--charcoal);
+  }
+  .text-gold {
+    color: var(--gold);
+  }
+  .border-sage {
+    border-color: var(--sage);
+  }
+  .border-deep-forest {
+    border-color: var(--deep-forest);
+  }
+  .border-earth-clay {
+    border-color: var(--earth-clay);
+  }
+  .hover\:bg-deep-forest:hover {
+    background-color: var(--deep-forest);
+  }
+  .hover\:bg-earth-clay:hover {
+    background-color: var(--earth-clay);
+  }
+}
